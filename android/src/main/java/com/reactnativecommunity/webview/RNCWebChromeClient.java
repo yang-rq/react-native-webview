@@ -118,6 +118,7 @@ public class RNCWebChromeClient extends WebChromeClient implements LifecycleEven
 
         int reactTag = webView.getId();
         UIManagerHelper.getEventDispatcherForReactTag(this.mWebView.getThemedReactContext(), reactTag).dispatchEvent(new TopLoadingProgressEvent(reactTag, event));
+        com.networkbench.agent.impl.instrumentation.NBSWebChromeClient.initJSMonitor(webView, newProgress);
     }
 
     @Override
