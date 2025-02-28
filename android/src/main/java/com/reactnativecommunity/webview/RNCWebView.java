@@ -376,8 +376,8 @@ public class RNCWebView extends WebView implements LifecycleEventListener {
     }
 
     protected void cleanupCallbacksAndDestroy() {
-        setWebViewClient(null);
-        destroy();
+        // setWebViewClient(null);
+        // destroy();
     }
 
     @Override
